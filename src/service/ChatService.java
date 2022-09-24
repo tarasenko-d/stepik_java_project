@@ -1,0 +1,38 @@
+package service;
+
+import sockets.ChatWebSocket;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.Collections;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+
+public class ChatService {
+    private Set<ChatWebSocket> webSockets;
+
+    public ChatService() {
+        this.webSockets = Collections.newSetFromMap(new ConcurrentHashMap<>());
+    }
+
+    public void sendMessage(String data) {
+        for (ChatWebSocket user : webSockets) {
+            try {
+                user.sendString(data);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+    }
+
+    public void add(ChatWebSocket webSocket) {
+        System.out.println("On Add");
+        webSockets.add(webSocket);
+    }
+
+    public void remove(ChatWebSocket webSocket) {
+        webSockets.remove(webSocket);
+    }
+
+}
