@@ -11,8 +11,9 @@ public class DBConfig {
     private static final String hibernate_connection_username = "test";
     private static final String hibernate_connection_password = "test";
     private static final String hibernate_connection_url = "jdbc:h2:./h2db";
+   // private static final String hibernate_connection_url = "jdbc:h2:mem:testdb";
     //private static final String hibernate_connection_url = "jdbc:h2:test";
-    private static final String hibernate_hbm2ddl_auto = "create";
+    private static final String hibernate_hbm2ddl_auto = "update";
 
     public static Configuration getH2Configuration() {
         Configuration configuration = new Configuration();

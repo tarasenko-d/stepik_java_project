@@ -27,6 +27,7 @@ public class ChatWebSocket {
 
     @OnWebSocketMessage
     public void onMessage(String data) {
+
         chatService.sendMessage(data);
     }
 

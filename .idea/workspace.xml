@@ -4,49 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="453e857b-d89f-4ec3-b666-e1788f085b8e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h2db.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h2db.trace.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/chat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public_html/sign_in.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/DBConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dao/UsersDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/factory/SessionFactoryFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/ChatService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/DBException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/DBService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/PageGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlets/ChatServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlets/ChatViewServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlets/SignInServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/servlets/SignUpServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sockets/ChatWebSocket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/config/DBConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dao/UsersDAO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/factory/SessionFactoryFactory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/service/ChatService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/service/DBException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/service/DBService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/service/PageGenerator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/servlets/ChatServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/servlets/ChatViewServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/servlets/SignInServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/servlets/SignUpServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/sockets/ChatWebSocket.class" afterDir="false" />
+    <list default="true" id="453e857b-d89f-4ec3-b666-e1788f085b8e" name="Changes" comment="try">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/h2db.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/DBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/DBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/PageGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PageGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/servlets/ChatViewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/ChatViewServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sockets/ChatWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sockets/ChatWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/config/DBConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/DBConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/PageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PageGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlets/ChatViewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/ChatViewServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,11 +57,11 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/stepic_java_webserver/Proj4/L4.1 WebSockets/git",
+    "last_opened_file_path": "C:/stepic_java_webserver/Proj4/Labyrinth",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Perforce"
+    "settings.editor.selected.configurable": "file.status.colors"
   }
 }]]></component>
   <component name="RunManager">
@@ -113,6 +85,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Dell e7440\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="453e857b-d89f-4ec3-b666-e1788f085b8e" name="Changes" comment="" />
@@ -121,6 +96,14 @@
       <option name="presentableId" value="Default" />
       <updated>1663701668102</updated>
     </task>
+    <task id="LOCAL-00001" summary="try">
+      <created>1664016250778</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664016250778</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +129,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="try" />
+    <option name="LAST_COMMIT_MESSAGE" value="try" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -154,7 +141,32 @@
           <line>22</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/ChatViewServlet.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/service/PageGenerator.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/service/PageGenerator.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/ChatViewServlet.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="template" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

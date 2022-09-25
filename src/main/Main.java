@@ -19,8 +19,10 @@ public class Main {
         Server server = new Server(8081);
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
 
-        dbService.addUser("admin","admin");
-        dbService.addUser("test","test");
+      /*  dbService.addUser("admin","admin");
+        dbService.addUser("test","test"); */
+        dbService.addOnlyUser("admin","admin");
+        dbService.addOnlyUser("test","test");
 
         context.addServlet(new ServletHolder(new SignUpServlet(dbService)), "/signup");
         context.addServlet(new ServletHolder(new SignInServlet(dbService)), "/signin");

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8"/>
@@ -22,8 +22,8 @@
 
         function sendMessage() {
             var messageField = document.getElementById("message");
-          <!--  var userNameField = document.getElementById("username");-->
-            var message = "login"+ ":" + messageField.value;
+            var userNameField = document.getElementById("username");
+            var message = userNameField.value + ":" + messageField.value;
             ws.send(message);
             messageField.value = '';
         }

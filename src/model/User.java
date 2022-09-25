@@ -14,7 +14,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "name", unique = true, updatable = false)
+   //  unique = true, was in hooks
+    @Column(name = "name",  updatable = false)
     private String name;
 
     @Column(name = "password")
