@@ -17,15 +17,21 @@
             }
             ws.onclose = function (event) {
 
+
             }
         };
 
         function sendMessage() {
             var messageField = document.getElementById("message");
             var userNameField = document.getElementById("username");
-            var message = userNameField.value + ":" + messageField.value;
+            var message =  userNameField.value + ":" +messageField.value;
             ws.send(message);
             messageField.value = '';
+        }
+
+        function clearChat(){
+             var $textarea = document.getElementById("messages");
+             $textarea.value = "";
         }
     </script>
 </head>
@@ -46,6 +52,7 @@
     <form name="message" action="">
         <input name="usermsg" type="text" id="message" size="40"/>
         <input type="button" name="submitmsg" value="Send..." onclick="sendMessage();"/>
+        <input type="button" name="clearmsg" value="Clear" onclick="clearChat();"/>
     </form>
 </div>
 </body>

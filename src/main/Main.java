@@ -26,7 +26,7 @@ public class Main {
 
         context.addServlet(new ServletHolder(new SignUpServlet(dbService)), "/signup");
         context.addServlet(new ServletHolder(new SignInServlet(dbService)), "/signin");
-        context.addServlet(new ServletHolder(new ChatServlet()), "/chat");
+        context.addServlet(new ServletHolder(new ChatServlet(dbService)), "/chat");
 
         //context.addServlet(new ServletHolder(new ChatViewServlet()), "/chat");
 

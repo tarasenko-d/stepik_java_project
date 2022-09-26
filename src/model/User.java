@@ -1,6 +1,8 @@
 package model;
 
 
+import org.eclipse.jetty.websocket.api.Session;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -14,8 +16,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-   //  unique = true, was in hooks
-    @Column(name = "name",  updatable = false)
+   // , was in hooks
+    @Column(name = "name", unique = true, updatable = false)
     private String name;
 
     @Column(name = "password")

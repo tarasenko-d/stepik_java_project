@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class SignUpServlet extends HttpServlet {
-    @SuppressWarnings({"FieldCanBeLocal", "UnusedDeclaration"}) //todo: remove after module 2 home work
+    @SuppressWarnings({"FieldCanBeLocal", "UnusedDeclaration"})
     private final DBService dbService;
 
     public SignUpServlet(DBService dbService) {
@@ -33,7 +33,6 @@ public class SignUpServlet extends HttpServlet {
         System.out.println("SignUpServlet: Added user: " + login);
         response.getWriter().println("HI, " + login + "!\n\nYou have registered.\n Your login: " + login +
                 "\n Your password: " + pass);
-
 
         response.setStatus(HttpServletResponse.SC_OK);
     }

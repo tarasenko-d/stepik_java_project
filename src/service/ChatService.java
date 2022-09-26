@@ -16,10 +16,10 @@ public class ChatService {
         this.webSockets = Collections.newSetFromMap(new ConcurrentHashMap<>());
     }
 
-    public void sendMessage(String data) {
+    public void sendMessage(String login,String message) {
         for (ChatWebSocket user : webSockets) {
             try {
-                user.sendString(data);
+                user.sendString(login,message);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }

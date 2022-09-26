@@ -3,6 +3,7 @@ package servlets;
 import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
 import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 import service.ChatService;
+import service.DBService;
 import service.PageGenerator;
 import sockets.ChatWebSocket;
 
@@ -15,19 +16,22 @@ import java.io.IOException;
 public class ChatServlet extends WebSocketServlet {
     private final static int LOGOUT_TIME = 10 * 60 * 1000;
     private final ChatService chatService;
+    private final DBService dbService;
 
-    public ChatServlet() {
+    public ChatServlet(DBService dbService) {
         this.chatService = new ChatService();
+        this.dbService = dbService;
     }
 
     @Override
     public void configure(WebSocketServletFactory factory) {
         factory.getPolicy().setIdleTimeout(LOGOUT_TIME);
-        factory.setCreator((req, resp) -> new ChatWebSocket(chatService));
+        factory.setCreator((req, resp) -> new ChatWebSocket(chatService, dbService));
     }
 
-public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
-        response.getWriter().println(PageGenerator.instance().getPage("chat.html",null));
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.getWriter().println(PageGenerator.instance().getPage("chat.html", null));
+
     }
 }
    /* Cookie[] cookies = request.getCookies();
