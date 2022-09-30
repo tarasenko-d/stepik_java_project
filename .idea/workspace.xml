@@ -4,34 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="453e857b-d89f-4ec3-b666-e1788f085b8e" name="Changes" comment="Add: chat clear, ban">
-      <change afterPath="$PROJECT_DIR$/src/controller/AccountServerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/AccountServerControllerMBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/AccountServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/AccountServerI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="453e857b-d89f-4ec3-b666-e1788f085b8e" name="Changes" comment="Add: chat clear, ban, userLimit">
+      <change afterPath="$PROJECT_DIR$/src/servlets/SignInServletTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h2db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/h2db.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public_html/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/chat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/DBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/DBConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ChatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/SignInServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/SignInServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/config/DBConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/config/DBConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/UsersDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UsersDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/factory/SessionFactoryFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/factory/SessionFactoryFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/ChatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ChatService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/DBException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/DBException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/DBService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/DBService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/DBService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/PageGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/PageGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlets/ChatServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/ChatServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlets/ChatViewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/ChatViewServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/servlets/SignInServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/SignInServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlets/SignUpServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/SignUpServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sockets/ChatWebSocket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sockets/ChatWebSocket.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +20,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -76,7 +54,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
     "last_opened_file_path": "C:/stepic_java_webserver/L5.1 Tests",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
@@ -91,7 +69,7 @@
       <recent name="service" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.SignInServletTest.postTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.Main" />
       <module name="L4.1" />
@@ -121,8 +99,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignInServletTest.postTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="L4.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="servlets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="servlets" />
+      <option name="MAIN_CLASS_NAME" value="servlets.SignInServletTest" />
+      <option name="METHOD_NAME" value="postTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SignInServletTest.postTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SignInServletTest.doPost" />
       </list>
@@ -161,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664235543718</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add: chat clear, ban, userLimit">
+      <created>1664573447775</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1664573447775</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,7 +193,8 @@
     <MESSAGE value="try" />
     <MESSAGE value="with working sign up and chat" />
     <MESSAGE value="Add: chat clear, ban" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: chat clear, ban" />
+    <MESSAGE value="Add: chat clear, ban, userLimit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add: chat clear, ban, userLimit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -207,14 +210,119 @@
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/service/AccountServer.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="48" />
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/service/AccountServer.java</url>
-          <line>18</line>
-          <option name="timeStamp" value="50" />
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServletTest.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.UnsupportedClassVersionError" package="java.lang" />

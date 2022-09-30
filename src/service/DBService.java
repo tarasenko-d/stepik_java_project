@@ -20,6 +20,8 @@ public class DBService {
         }
     }
 
+    //TODO создать аннотацию для описания методов
+    //Возвращает true если юзер отсутствует и false, если существует
     public boolean CheckUser (String login, String password){
         Optional<User> userOptional = Optional.ofNullable(userDAO.correctAccount(login,password));
         return (userOptional.isEmpty());
