@@ -1,6 +1,7 @@
 package servlets;
 
 import org.eclipse.jetty.websocket.api.Session;
+import service.AccountServerI;
 import service.DBService;
 import service.PageGenerator;
 
@@ -10,9 +11,12 @@ import java.io.IOException;
 
 public class SignInServlet extends HttpServlet {
     private final DBService dbService;
+    private final AccountServerI accountServer;
 
-    public SignInServlet(DBService dbService) {
+
+    public SignInServlet(DBService dbService, AccountServerI accountServer) {
         this.dbService = dbService;
+        this.accountServer = accountServer;
     }
 
     public void doPost(HttpServletRequest request,
@@ -27,15 +31,44 @@ public class SignInServlet extends HttpServlet {
             return;
         }
 
-        if(dbService.CheckUser(login,pass)){
+        int limit = accountServer.getUsersLimit();
+        int count = accountServer.getUsersCount();
+
+
+        if (limit <= count) {
+            if (!accountServer.isOnline(login)) {
+                System.out.println("User were rejected");
+                response.getWriter().println("Server is closed for maintenance!");
+                response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+                return;
+            }
+        }
+
+        if (dbService.CheckUser(login, pass)) {
             response.setContentType("text/html;charset=utf-8");
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             response.getWriter().println("Unauthorized");
             return;
         }
-        response.setContentType("text/html;charset=utf-8");
 
-       /*   Cookie[] cookies = request.getCookies();
+
+        response.setContentType("text/html;charset=utf-8");
+        if (!accountServer.isOnline(login)) {
+            accountServer.addNewUser(login);
+        }
+        doGet(request, response);
+
+    }
+
+    public void doGet(HttpServletRequest request,
+                      HttpServletResponse response) throws IOException {
+        response.getWriter().println(PageGenerator.instance().getPage("sign_in.html", null));
+    }
+
+}
+
+
+ /*   Cookie[] cookies = request.getCookies();
         String cookieName = "sos";
         if(cookies !=null) {
             for(Cookie c: cookies) {
@@ -49,9 +82,6 @@ public class SignInServlet extends HttpServlet {
       Cookie cookie = new Cookie("login",login);
         cookie.setMaxAge(-1);
         response.addCookie(cookie);*/
-
-        doGet(request,response);
-
        /*
         // response.setStatus(HttpServletResponse.SC_OK);
         // response.getWriter().println("Authorized: " + login+"\n");
@@ -65,15 +95,7 @@ public class SignInServlet extends HttpServlet {
         requestDispatcher.forward();
 
         dispatcher = req.getRequestDispatcher(index).forward(request, response);
-        */
-    }
-
-    public void doGet(HttpServletRequest request,
-                      HttpServletResponse response) throws IOException{
-        response.getWriter().println(PageGenerator.instance().getPage("sign_in.html",null));
-    }
-
-    //get logged user profile
+        */    //get logged user profile
    /* public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException, IOException {
         String sessionId = request.getSession().getId();
@@ -108,5 +130,3 @@ public class SignInServlet extends HttpServlet {
 
     }
     */
-
-}
