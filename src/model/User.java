@@ -1,11 +1,6 @@
 package model;
 
-
-import org.eclipse.jetty.websocket.api.Session;
-
 import javax.persistence.*;
-import java.io.Serializable;
-
 
 @Entity
 @Table(name = "users_all")
@@ -16,7 +11,6 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-   // , was in hooks
     @Column(name = "name", unique = true, updatable = false)
     private String name;
 
@@ -43,7 +37,6 @@ public class User {
         this.setPassword(password);
         this.ban=false;
     }
-
 
     @SuppressWarnings("UnusedDeclaration")
     public String getName() {

@@ -2,9 +2,7 @@ package servlets;
 
 import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
 import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
-import service.ChatService;
-import service.DBService;
-import service.PageGenerator;
+import service.*;
 import sockets.ChatWebSocket;
 
 import javax.servlet.annotation.WebServlet;
@@ -14,11 +12,12 @@ import java.io.IOException;
 
 @WebServlet(name = "WebSocketChatServlet", urlPatterns = {"/chat"})
 public class ChatServlet extends WebSocketServlet {
-    private final static int LOGOUT_TIME = 10 * 60 * 1000;
-    private final ChatService chatService;
-    private final DBService dbService;
 
-    public ChatServlet(DBService dbService) {
+    private final static int LOGOUT_TIME = 10 * 60 * 1000;
+    private final ChatServiceI chatService;
+    private final DBServiceI dbService;
+
+    public ChatServlet(DBServiceI dbService) {
         this.chatService = new ChatService();
         this.dbService = dbService;
     }
@@ -33,15 +32,5 @@ public class ChatServlet extends WebSocketServlet {
         response.getWriter().println(PageGenerator.instance().getPage("chat.html", null));
 
     }
+
 }
-   /* Cookie[] cookies = request.getCookies();
-    String cookieName = "user_login";
-        System.out.println("here");
-                if(cookies !=null) {
-                for(Cookie c: cookies) {
-                if(cookieName.equals(c.getName())) {
-                System.out.println("yes");
-                break;
-                }
-                }
-                }*/

@@ -3,6 +3,7 @@ package servlets;
 import org.junit.jupiter.api.Test;
 import service.AccountServerI;
 import service.DBService;
+import service.DBServiceI;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -25,8 +26,8 @@ class SignInServletTest {
         return accountMock;
     }
 
-    private DBService getDBServiceMock() {
-        DBService dbServiceMock = mock(DBService.class);
+    private DBServiceI getDBServiceMock() {
+        DBServiceI dbServiceMock = mock(DBServiceI.class);
         when(dbServiceMock.CheckUser("admin", "admin")).thenReturn(true);
         return dbServiceMock;
     }
@@ -49,7 +50,7 @@ class SignInServletTest {
     void postTest() throws IOException, ServletException {
         StringWriter stringWriter = new StringWriter();
         AccountServerI accountServerMock = getMockAccountServer(3);
-        DBService dbServiceMock = getDBServiceMock();
+        DBServiceI dbServiceMock = getDBServiceMock();
         HttpServletResponse responseMock = getMockResponse(stringWriter);
         HttpServletRequest requestMock = getMockRequest();
 

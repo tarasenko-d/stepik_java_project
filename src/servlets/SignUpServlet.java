@@ -1,6 +1,6 @@
 package servlets;
 
-import service.DBService;
+import service.DBServiceI;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -11,15 +11,15 @@ import java.io.IOException;
 
 public class SignUpServlet extends HttpServlet {
     @SuppressWarnings({"FieldCanBeLocal", "UnusedDeclaration"})
-    private final DBService dbService;
+    private final DBServiceI dbService;
 
-    public SignUpServlet(DBService dbService) {
+    public SignUpServlet(DBServiceI dbService) {
         this.dbService = dbService;
     }
 
     //register
     public void doPost(HttpServletRequest request,
-                       HttpServletResponse response) throws ServletException, IOException {
+                       HttpServletResponse response) throws IOException {
         String login = request.getParameter("login");
         String pass = request.getParameter("pass");
 

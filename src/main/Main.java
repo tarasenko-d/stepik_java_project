@@ -19,7 +19,7 @@ import java.lang.management.ManagementFactory;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        DBService dbService = new DBService();
+        DBServiceI dbService = new DBService();
 
         Server server = new Server(8080);
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
@@ -34,7 +34,7 @@ public class Main {
         //Save MBean on server
         mbs.registerMBean(serverStatistics, name);
 
-      /*  dbService.addUser("admin","admin");
+     /* dbService.addUser("admin","admin");
         dbService.addUser("test","test"); */
         dbService.addOnlyUser("admin","admin");
         dbService.addOnlyUser("test","test");
@@ -42,8 +42,6 @@ public class Main {
         context.addServlet(new ServletHolder(new SignUpServlet(dbService)), "/signup");
         context.addServlet(new ServletHolder(new SignInServlet(dbService,accountServer)), "/signin");
         context.addServlet(new ServletHolder(new ChatServlet(dbService)), "/chat");
-
-        //context.addServlet(new ServletHolder(new ChatViewServlet()), "/chat");
 
         ResourceHandler resource_handler = new ResourceHandler();
         resource_handler.setDirectoriesListed(true);
