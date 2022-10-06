@@ -1,7 +1,13 @@
 package model;
 
+import lombok.*;
+
 import javax.persistence.*;
 
+@ToString
+@NoArgsConstructor
+@Setter
+@Getter
 @Entity
 @Table(name = "users_all")
 public class User {
@@ -17,10 +23,28 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name="isBanned")
+    @Column(name = "isBanned")
     private boolean ban;
 
-    //Important to Hibernate!
+
+    public User(String name, String password) {
+        this.setId(-1);
+        this.setName(name);
+        this.setPassword(password);
+        this.ban = false;
+    }
+
+    public void makeBan() {
+        this.ban = true;
+    }
+
+}
+
+
+
+/*
+
+  //Important to Hibernate!
     @SuppressWarnings("UnusedDeclaration")
     public User() {
     }
@@ -31,14 +55,7 @@ public class User {
         this.setName(name);
     }
 
-    public User(String name, String password) {
-        this.setId(-1);
-        this.setName(name);
-        this.setPassword(password);
-        this.ban=false;
-    }
-
-    @SuppressWarnings("UnusedDeclaration")
+ @SuppressWarnings("UnusedDeclaration")
     public String getName() {
         return name;
     }
@@ -51,13 +68,7 @@ public class User {
         return password;
     }
 
-    public void makeBan(){
-        this.ban = true;
-    }
 
-    public boolean isBanned(){
-        return this.ban;
-    }
     public void setPassword(String password) {
         this.password = password;
     }
@@ -70,6 +81,10 @@ public class User {
         this.id = id;
     }
 
+     public boolean isBan() {
+        return this.ban;
+    }
+
     @Override
     public String toString() {
         return "UserDataSet{" +
@@ -78,5 +93,4 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
-
-}
+*/

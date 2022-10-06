@@ -4,22 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="453e857b-d89f-4ec3-b666-e1788f085b8e" name="Changes" comment="Add: chat clear, ban, userLimit &amp; test">
-      <change afterPath="$PROJECT_DIR$/src/service/ChatServiceI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/service/DBServiceI.java" afterDir="false" />
+    <list default="true" id="453e857b-d89f-4ec3-b666-e1788f085b8e" name="Changes" comment="Last addition: separation of implementation and interfaces&#10;Already contains: chat clear, ban, userLimit &amp; test">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h2db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/h2db.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/h2db.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/h2db.trace.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public_html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public_html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/AccountServerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AccountServerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/UsersDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UsersDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/factory/SessionFactoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/factory/SessionFactoryFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/ChatService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/service/DBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/DBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/DBServiceI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/DBServiceI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlets/ChatServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/ChatServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlets/SignInServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/SignInServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/servlets/SignInServletTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/SignInServletTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/servlets/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/servlets/SignUpServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sockets/ChatWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sockets/ChatWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/UsersDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UsersDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/ChatService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ChatService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/DBService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/DBService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/servlets/ChatServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/ChatServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/servlets/SignInServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlets/SignInServlet.class" afterDir="false" />
@@ -36,13 +40,14 @@
       <list>
         <option value="HTML File" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -76,7 +81,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -136,8 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SignInServletTest.postTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SignInServletTest.postTest" />
         <item itemvalue="JUnit.SignInServletTest.doPost" />
       </list>
     </recent_temporary>
@@ -189,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664578430511</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Last addition: separation of implementation and interfaces&#10;Already contains: chat clear, ban, userLimit &amp; test">
+      <created>1664922933690</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664922933690</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,7 +233,8 @@
     <MESSAGE value="Add: chat clear, ban" />
     <MESSAGE value="Add: chat clear, ban, userLimit" />
     <MESSAGE value="Add: chat clear, ban, userLimit &amp; test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add: chat clear, ban, userLimit &amp; test" />
+    <MESSAGE value="Last addition: separation of implementation and interfaces&#10;Already contains: chat clear, ban, userLimit &amp; test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last addition: separation of implementation and interfaces&#10;Already contains: chat clear, ban, userLimit &amp; test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -307,39 +320,14 @@
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
+          <url>file://$PROJECT_DIR$/src/servlets/SignUpServlet.java</url>
           <line>25</line>
-          <option name="timeStamp" value="69" />
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="70" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="71" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="73" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/servlets/SignInServlet.java</url>
-          <line>39</line>
-          <option name="timeStamp" value="74" />
+          <url>file://$PROJECT_DIR$/src/servlets/SignUpServlet.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.UnsupportedClassVersionError" package="java.lang" />

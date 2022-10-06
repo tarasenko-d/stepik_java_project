@@ -1,5 +1,6 @@
 package servlets;
 
+import lombok.AllArgsConstructor;
 import org.eclipse.jetty.websocket.servlet.WebSocketServlet;
 import org.eclipse.jetty.websocket.servlet.WebSocketServletFactory;
 import service.*;
@@ -9,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+
 
 @WebServlet(name = "WebSocketChatServlet", urlPatterns = {"/chat"})
 public class ChatServlet extends WebSocketServlet {

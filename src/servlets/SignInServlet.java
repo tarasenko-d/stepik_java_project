@@ -1,10 +1,10 @@
 package servlets;
 
+import lombok.NonNull;
 import service.AccountServerI;
 import service.DBServiceI;
 import service.PageGenerator;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,11 +26,6 @@ public class SignInServlet extends HttpServlet {
         String login = request.getParameter("login");
         String pass = request.getParameter("pass");
 
-        if (login == null) {
-            response.setContentType("text/html;charset=utf-8");
-            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            return;
-        }
 
         int limit = accountServer.getUsersLimit();
         int count = accountServer.getUsersCount();

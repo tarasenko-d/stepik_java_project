@@ -5,6 +5,7 @@ public interface DBServiceI {
     void addOnlyUser (String login, String password);
 
     boolean CheckUser (String login, String password);
+    boolean doesntExists(String login);
 
     void banUser (String login);
 

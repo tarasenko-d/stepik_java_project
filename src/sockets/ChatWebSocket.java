@@ -49,7 +49,7 @@ public class ChatWebSocket {
     public void sendString(String login, String message) {
         try {
             String check = message.toLowerCase(Locale.ROOT);
-            if (message.matches(".*миэт.*")) {
+            if (check.matches(".*миэт.*")) {
                 dbService.banUser(login);
                 throw new IllegalStateException("ny eto ban");
             }

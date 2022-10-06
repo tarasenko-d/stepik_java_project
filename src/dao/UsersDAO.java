@@ -65,7 +65,7 @@ public class UsersDAO {
         Session session = SessionFactoryFactory.createSessionFactory().openSession();
         Criteria criteria = session.createCriteria(User.class).add(Restrictions.eq("name", name));
         User profile = (User) criteria.uniqueResult();
-        boolean isBanned =  profile.isBanned();
+        boolean isBanned =  profile.isBan();
         session.close();
         return isBanned;
     }

@@ -19,6 +19,11 @@ public class DBService implements DBServiceI {
         }
     }
 
+    @Override
+    public boolean doesntExists(String login){
+        Optional<User> userOptional = Optional.ofNullable(userDAO.findByName(login));
+        return userOptional.isEmpty();
+    }
 
     //Возвращает true если юзер отсутствует и false, если существует
     @Override
